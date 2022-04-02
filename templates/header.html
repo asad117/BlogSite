@@ -1,0 +1,9 @@
+{% load static %}
+
+<header id='main-navigation'>
+    <h1><a href="{% url 'home' %}">My blog</a></h1>
+    <nav>
+        <a href="{% url 'read-later' %}">Saved post</a>
+        <a href="{% url 'allPost' %}">All post</a>
+    </nav>
+</header>

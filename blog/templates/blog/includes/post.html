@@ -1,0 +1,17 @@
+ {% load static %} {% block css_file %}
+<link rel="stylesheet" href="{% static 'blog/post.css' %}"> {% endblock %}
+<li>
+    <article class="post">
+        <a href="{% url 'post-details' post.slug %}">
+            <img class="post-img" src="{{ post.image.url}}" alt="">
+            <div class="post_content">
+                <h3>
+                    {{post.title}}
+                </h3>
+                <p>{{post.description | slice:60}}
+
+                </p>
+            </div>
+        </a>
+    </article>
+</li>

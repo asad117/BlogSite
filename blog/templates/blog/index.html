@@ -1,0 +1,30 @@
+{% extends "base.html" %} {% load static %} {% block title %} Personal website {% endblock %} {% block css_file %}
+<link rel="stylesheet" href="{% static 'blog/index.css' %}"> {% endblock %} {% block body %}
+
+
+<section id="welcome">
+    <header>
+        <img src="{% static 'blog/images/asad.jpg' %}" alt="">
+        <h2>
+            Hashmi Blogs
+
+        </h2>
+    </header>
+    <p>Lorem ipsum is placeholder text commonly used in the graphic, print, and publishing industries for previewing layouts and visual mockups.</p>
+</section>
+
+<section id="latest-posts">
+    <h2>My latest posts </h2>
+    <ul>
+        {% for post in posts %} {% include "blog/includes/post.html" %} {% endfor %}
+    </ul>
+</section>
+
+<section id="about">
+    <h2>What i do </h2>
+    <p>orem ipsum is placeholder text commonly used in the graphic,orem ipsum is placeholder text commonly used in the graphic,orem ipsum is placeholder text commonly used in the graphic,orem ipsum is placeholder text commonly used in the graphic,</p>
+</section>
+
+
+
+{% endblock %}
